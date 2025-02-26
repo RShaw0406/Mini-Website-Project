@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Needed for Bootstrap to work properly-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Piggy Bank products page.">
+    <!--Page title goes here-->
+    <title>Piggy Bank | Products</title>
+    <!--Links to required Bootstrap and Fontawesome files-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!--Links to site specific CSS and JS files-->
+    <link rel="stylesheet" href="../css/Master.css">
+    <link rel="stylesheet" href="../css/Products.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+    <!--Header used to wrap around page navigation links etc.-->
+    <header>
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+                        alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+                <button class="navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+                    aria-label="Toggle navigation links">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-links">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                                    class="fa-solid fa-sterling-sign"></span> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Calculators.html"
+                                aria-label="Go to Calculators page"><span class="fa-solid fa-calculator"></span>
+                                Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                                    class="fa-solid fa-address-book"></span> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                                    class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="sign-in">
+                            <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+                        </li>
+                        <li class="nav-item d-none" id="sign-out">
+                            <button class="btn btn-primary" onClick="clearLoginCreds()" aria-label="Sign out"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main used to wrap around page content-->
+    <main>
+        <div class="container">
+            <br>
+            <h1>We offer various products to suit your needs...</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="accordionProducts">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" role="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFirstTimeBuyer" aria-label="Open First Time
+                                    Buyer">First Time
+                                    Buyer</a>
+                            </div>
+                            <div id="collapseFirstTimeBuyer" class="collapse" data-parent="#accordionProducts">
+                                <div class="card-body">
+                                    <p>We offer a range of mortgage products for first time buyers:</p>
+                                    <ul>
+                                        <li>Fixed-rate mortgages - This means that the interest rate on your mortgage is
+                                            fixed for a certain period of time. Usually 2-5 years.</li>
+                                        <li>Standard variable rate mortgages (SVRs) - This type of mortgage is usually
+                                            set at the basic rate of interest. We may also choose to adjust the rate of
+                                            interest charged.</li>
+                                        <li>Tracker mortgages - A tracker mortgage has a variable interest rate that is
+                                            usually determined by the Bank of England's current base rate.</li>
+                                    </ul>
+                                    <p>You class as a first time buyer if:</p>
+                                    <ul>
+                                        <li>You have never owned a property used for residential purposes in the UK or
+                                            even abroad.</li>
+                                        <li>You have only ever owned a property used for commerical purposed that does
+                                            not have a residential space attached. (e.g. a shop with a flat upstairs).
+                                        </li>
+                                    </ul>
+                                    <p>The UK Government offers a range of schemes to help you get on the property
+                                        ladder:</p>
+                                    <ul>
+                                        <li>Lifetime ISA - You qualify for a Lifetime ISA if you are aged 18-40. You can
+                                            save up to £4,000 per year and the government will add an additional 25% of
+                                            your savings.</li>
+                                        <li>Right to buy - This scheme gives tenants who are in rental accommodation
+                                            under
+                                            a local council or housing association the opportunity to buy ther house
+                                            they currently live in.</li>
+                                        <li>First Homes scheme - You qualify for this sheme if you are over 18. It
+                                            offers new-build houses at a discounted rate compared to the market value.
+                                        </li>
+                                        <li>Shared ownership - This gives you the opportunity to co-own with a landlord.
+                                        </li>
+                                    </ul>
+                                    <p>To book an appointment with us please complete a <a aria-label="Go to Contact"
+                                            href="../html/Contact.html">contact</a> form.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" role="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseBuyToLet" aria-label="Open Buy to Let">Buy to Let</a>
+                        </div>
+                        <div id="collapseBuyToLet" class="collapse" data-parent="#accordionProducts">
+                            <div class="card-body">
+                                <p>Buy to let mortgages are a way for you move into the rental market.</p>
+                                <p>How it works:</p>
+                                <ul>
+                                    <li>Deposit - The deposit required is usually higher than a typical mortgage
+                                        deposit. This is usually between 20-40% of the value of the property.</li>
+                                    <li>Interest-only payments - We will expect you to pay only the interest each month,
+                                        not the full amount.</li>
+                                    <li>Full amount payment - Once the term of the mortgage ends we will expect you to
+                                        pay the full amount of the mortgage value owed to us.</li>
+                                </ul>
+                                <p>Are you eligible:</p>
+                                <ul>
+                                    <li>Age - We will require you to be above 21 to apply for a Buy to let mortgage.
+                                    </li>
+                                    <li>Deposit - You will need between 20-40% of the value of the property as a
+                                        deposit.</li>
+                                    <li>Income - You will need to be earning above £25,000 to apply for a Buy to let
+                                        mortgage.</li>
+                                    <li>Previous Borrowing - We will need to check your credit/borrowing history to see
+                                        how reliable you are.</li>
+                                </ul>
+                                <p>To book an appointment with us please complete a <a aria-label="Go to Contact"
+                                        href="../html/Contact.html">contact</a> form.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" role="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseReMortgage" aria-label="Open Re-mortgage">Re-mortgage</a>
+                        </div>
+                        <div id="collapseReMortgage" class="collapse" data-parent="#accordionProducts">
+                            <div class="card-body">
+                                <p>By remortgaging with us it means you want to switch your current mortgage to a deal
+                                    offered by us.</p>
+                                <p>Why do it:</p>
+                                <ul>
+                                    <li>Switch to a better deal.</li>
+                                    <li>Pay off the value of the mortgage sooner.</li>
+                                    <li>Release equity on your property.</li>
+                                    <li>Consolidate debt to reduce the value of your monthly outgoings.</li>
+                                </ul>
+                                <p>How to do it:</p>
+                                <ul>
+                                    <li>Apply for your chosen mortgage with us. We will need to check things like your
+                                        ID, payslips, and bank statements to work out your eligibility.</li>
+                                    <li>We will need to assess that you can afford the mortgage. We will carry out a
+                                        credit check and valuation of your current property.</li>
+                                    <li>Once all checks are complete we may make you an offer.</li>
+                                </ul>
+                                <p>To book an appointment with us please complete a <a aria-label="Go to Contact"
+                                        href="../html/Contact.html">contact</a> form.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <!--Footer used to wrap around page footer links etc.-->
+    <footer>
+        <div class="container p-4">
+            <div class="row my-4">
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+                        <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                                alt="Piggy Bank home link" height="100" width="100"></a>
+                    </div>
+                    <div class="text-center">
+                        <strong class="text-center">
+                            Connect with us
+                        </strong>
+                    </div>
+                    <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Facebook">
+                                <span class="fa-brands fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Twitter">
+                                <span class="fa-brands fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Instagram">
+                                <span class="fa-brands fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                                <span class="fa-brands fa-youtube"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <strong>
+                        Contact us
+                    </strong>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            © 2023 Copyright: Piggy Bank
+        </div>
+    </footer>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div id="cookieConsent" class="cookie-consent" style="display: none;">
+            <div class="cookie-consent-inner">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="cookie-text">
+                            <p>We would like to set cookies to understand how you use this website. We also use cookies
+                                set
+                                by other sites to help use deliver content from their services.</p>
+                            <p>To find out more about the cookies on this website, go to <a
+                                    href="../html/Cookies.html">Cookies</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+                        <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/master/master.js" type="module"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+</body>
+
+</html>

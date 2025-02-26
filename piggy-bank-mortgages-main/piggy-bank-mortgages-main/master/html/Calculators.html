@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Needed for Bootstrap to work properly-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Piggy Bank calculators page.">
+    <!--Page title goes here-->
+    <title>Piggy Bank | Calculators</title>
+    <!--Links to required Bootstrap and Fontawesome files-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!--Links to site specific CSS and JS files-->
+    <link rel="stylesheet" href="../css/Master.css">
+    <link rel="stylesheet" href="../css/Calculators.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+    <!--Header used to wrap around page navigation links etc.-->
+    <header>
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+                        alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+                <button class="navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+                    aria-label="Toggle navigation links">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-links">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                                    class="fa-solid fa-sterling-sign"></span> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Calculators.html"
+                                aria-label="Go to Calculators page"><span class="fa-solid fa-calculator"></span>
+                                Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                                    class="fa-solid fa-address-book"></span> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                                    class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="sign-in">
+                            <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+                        </li>
+                        <li class="nav-item d-none" id="sign-out">
+                            <button class="btn btn-primary" onClick="clearLoginCreds()" aria-label="Sign out"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main used to wrap around page content-->
+    <main>
+        <div class="container">
+            <br>
+            <h1>Try our calculators below...</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <form id="deposit-form">
+                        <div class="row form-header">
+                            <div class="col-lg-12 text-center">
+                                <h2>Deposit Calculator</h2>
+                                <p>See how much you need to save to reach your desired deposit.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="depositAmountRangeInput" class="form-label">How much do you want to save for
+                                    your deposit?</label>
+                                <span id="depositAmountValue" class="range-value"></span>
+                                <input id="depositAmountRangeInput" name="depositAmountRange" type="range" min="5000"
+                                    max="100000" value="45000">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button id="btnOpenModalDepositAmountInfo" type="button" class="btn btn-primary">More
+                                    Info</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="depositTimeRangeInput" class="form-label">How long are you planning to save
+                                    for?</label>
+                                <span id="depositTimeValue" class="range-value"></span>
+                                <input id="depositTimeRangeInput" name="depositTimeRange" type="range" min="1" max="20"
+                                    value="5">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <button id="btnOpenModalDepositTimeInfo" type="button" class="btn btn-primary">More
+                                    Info</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="form-label">Each month you will need to save: 
+                                </label>
+                                <span id="monthlySavingsValue" class="range-value"></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <form class="needs-validation" id="mortgage-calculator-form" novalidate>
+                        <div class="row form-header">
+                            <div class="col-lg-12 text-center">
+                                <h2 class="text-center">Mortgage Calculator</h2>
+                                <p class="text-center">See how much you can potentially borrow and what it will cost.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-center justify-content-center text-center">
+                            <div class="col-lg-12">
+                                <div class="step-status">
+                                    <span class="step active">1</span>
+                                    <span class="step">2</span>
+                                    <span class="step">3</span>
+                                    <span class="step">4</span>
+                                    <span class="step">5</span>
+                                    <span class="step">6</span>
+                                    <span class="step">7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="panel">
+                            <div class="row">
+                                <h3 class="required">Who is this mortgage for?</h3>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="applicant" value="single-applicant"
+                                    id="single-applicant" required>
+                                <label class="form-check-label" for="single-applicant">
+                                    Myself
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="applicant" value="partner-applicant"
+                                    id="partner-applicant" required>
+                                <label class="form-check-label" for="partner-applicant">
+                                    Myself and my partner
+                                </label>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div class="grid">
+                                <div class="row">
+                                    <h3>Personal Details</h3>
+                                </div>
+                                <div id="personal-details"></div>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div class="grid">
+                                <div class="row">
+                                    <h3 class="required">What will you use the mortgage for?</h3>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mortgageType" value="first-home"
+                                        id="first-home" required>
+                                    <label class="form-check-label" for="first-home">
+                                        Buy your first home
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mortgageType" value="move-home"
+                                        id="move-home" required>
+                                    <label class="form-check-label" for="move-home">
+                                        Move home
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mortgageType"
+                                        value="another-property" id="another-property" required>
+                                    <label class="form-check-label" for="another-property">
+                                        Buy another property
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div class="grid">
+                                <div class="row">
+                                    <h3>Employment Details</h3>
+                                </div>
+                                <div id="employment"></div>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div class="grid">
+                                <div class="row">
+                                    <h3>Income</h3>
+                                </div>
+                                <div id="income"></div>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div class="grid">
+                                <div class="row">
+                                    <h3>Monthly Outgoings</h3>
+                                </div>
+                                <div id="outgoings"></div>
+                            </div>
+                        </div>
+                        <div class="panel d-none">
+                            <div id="result"></div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-secondary d-none" style="margin-right: 10px"
+                                id="prev-button">Previous</button>
+                            <button class="btn btn-primary" id="next-button">Next</button>
+                            <button class="btn btn-primary d-none" id="contact-button">Contact us</button>
+                            <button type="submit" class="btn btn-primary d-none" id="submit-button">Get
+                                results</button>
+                        </div>
+                        <div class="row d-none" id="failMessage">
+                            <div class="col-lg-12">
+                                <div class="alert alert-danger mt-3">
+                                    <strong>Failure!</strong> Please fill in all required fields above.
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="modalDepositInfo" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="headerDepositAmountInfo" class="modal-title">How much will you need for a
+                        deposit?</h2>
+                    <h2 id="headerDepositTimeInfo" class="modal-title">How long will you need to save
+                        for?</h2>
+                </div>
+                <div class="modal-body">
+                    <div id="divDepositAmountInfo">
+                        <p>The average desposit in the UK is £45,000 outside London and £80,000 in London.</p>
+                        <p>Usually you will need between 5% and 20% of the price of a property as a deposit.</p>
+                        <p>For example, to buy a £200,000 house you will need between £10,000 and £40,000 as a deposit.
+                        </p>
+                        <div class="text-center">
+                            <p class="info-source">Information source: <a
+                                    href="https://www.moneyhelper.org.uk/en/homes/buying-a-home/saving-money-for-a-mortgage-deposit?source=mas"
+                                    target="_blank">Money Advice Service</a></p>
+                        </div>
+                    </div>
+                    <div id="divDepositTimeInfo">
+                        <p>On average it takes between 6 and 8 years to save for a deposit.</p>
+                        <p>This varies depending on location in the UK.</p>
+                        <p>In London for example, it can take first time buyers up to 11 years to reach their deposit
+                            goal.
+                        </p>
+                        <div class="text-center">
+                            <p class="info-source">Information source: <a
+                                    href="https://www.financialreporter.co.uk/mortgages/time-taken-to-save-a-first-home-deposit-rises-by-up-to-three-years.html"
+                                    target="_blank">Financial Reporter</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="finishedDepositInfo" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer used to wrap around page footer links etc.-->
+    <footer>
+        <div class="container p-4">
+            <div class="row my-4">
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+                        <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                                alt="Piggy Bank home link" height="100" width="100"></a>
+                    </div>
+                    <div class="text-center">
+                        <strong class="text-center">
+                            Connect with us
+                        </strong>
+                    </div>
+                    <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Facebook">
+                                <span class="fa-brands fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Twitter">
+                                <span class="fa-brands fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Instagram">
+                                <span class="fa-brands fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                                <span class="fa-brands fa-youtube"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <strong>
+                        Contact us
+                    </strong>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            © 2023 Copyright: Piggy Bank
+        </div>
+    </footer>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div id="cookieConsent" class="cookie-consent" style="display: none;">
+            <div class="cookie-consent-inner">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="cookie-text">
+                            <p>We would like to set cookies to understand how you use this website. We also use cookies
+                                set
+                                by other sites to help use deliver content from their services.</p>
+                            <p>To find out more about the cookies on this website, go to <a
+                                    href="../html/Cookies.html">Cookies</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+                        <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/master/master.js" type="module"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+    <script src="../js/deposit-calculator/deposit-calculator.js" type="module"></script>
+    <script src="../js/auth/auth.js" type="module"></script>
+    <script src="../js/mortgage-calculator/form-handler.js" type="module"></script>
+</body>
+
+
+</html>

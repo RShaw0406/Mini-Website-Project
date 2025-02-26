@@ -1,0 +1,17 @@
+.card {
+    background-color: #132C33;
+    color: #FFFFFF;
+}
+
+.card-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: #04d3cb;
+}
+
+.card-body a{
+    color: #04d3cb;
+}

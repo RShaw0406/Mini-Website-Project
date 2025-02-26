@@ -1,0 +1,408 @@
+/*-------------------- Master Styles --------------------*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial;
+    background-color: #D8E3E7;
+    color: #132C33;
+    height: 100%;
+    font-size: 1.15rem;
+}
+
+/*-------------------- Top Navigation Styles --------------------*/
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.navbar {
+    background-color: #132C33;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.navbar-toggler span {
+    display: block;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+    -webkit-transition: transform 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.nav-item a {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    transition: box-shadow ease-in-out 1s;
+    margin: 0 1rem 0 0;
+    padding: 1rem;
+}
+
+.nav-item a:visited,
+.nav-item a:active,
+.nav-item a:focus {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+}
+
+.nav-item a:hover {
+    color: #FFFFFF;
+    box-shadow: inset 0 -0.15rem 0 0 #04d3cb;
+}
+
+/*-------------------- Footer Styles --------------------*/
+footer {
+    background-color: #132C33;
+    color: #FFFFFF;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+footer a {
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    box-shadow: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.social-text,
+.social-text a,
+.social-text a:hover {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin: 1rem;
+}
+
+/*-------------------- Button Styles --------------------*/
+.btn-primary {
+    background-color: #04d3cb;
+    color: #132C33;
+    border: none;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    opacity: 0.6;
+    background-color: #04d3cb;
+    color: #132C33;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #04d3cb !important;
+    color: #132C33 !important;
+    border: none;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+/*-------------------- Form/Form Control Styles --------------------*/
+form, .card {
+    background-color: #132C33;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 0.25rem #04d3cb;
+    color: #FFFFFF;
+    font-family: Arial;
+    margin: 1rem;
+}
+
+.form-header, .card-header {
+    border-bottom: 0.25rem solid #04d3cb;
+}
+
+.form-control:focus,
+.form-check-input:focus {
+    border-color: #04d3cb;
+    outline: 1rem;
+    -webkit-box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, .075), 0 0 1rem rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, .075), 0 0 1rem rgba(102, 175, 233, .6);
+}
+
+.form-check-input:checked {
+    background-color: #04d3cb;
+    border-color: #04d3cb;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+    background: #D8E3E7;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+input[type='range']:hover {
+    opacity: 1;
+}
+
+input[type='range']:focus {
+    border-color: #04d3cb;
+    outline: 1rem;
+    -webkit-box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, .075), 0 0 1rem rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1rem 1rem rgba(0, 0, 0, .075), 0 0 1rem rgba(102, 175, 233, .6);
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #04d3cb;
+    cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #04d3cb;
+    cursor: pointer;
+}
+
+/*-------------------- Modal Popup Styles --------------------*/
+.modal {
+    display: none;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding-top: 15rem;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #132C33;
+    color: #FFFFFF;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 0.25rem #04d3cb;
+    width: 50%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 1rem;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-footer {
+    padding: 1rem;
+}
+
+/*-------------------- Cookies Banner Styles --------------------*/
+.cookie-consent {
+    background-color: #132C33;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    font-family: Arial;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 100;
+}
+
+.cookie-consent-inner {
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: 0;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.cookie-text a{
+    color: #04d3cb;
+    text-decoration: none;
+}
+
+.cookie-text a:hover {
+    color: #04d3cb;
+    text-decoration: none;
+}
+
+.cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+
+/*-------------------- Tablet Landscape Styles --------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-item a:hover {
+        color: #04d3cb;
+        box-shadow: none;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+}
+
+/*-------------------- Tablet Styles --------------------*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .nav-item a:hover {
+        color: #04d3cb;
+        box-shadow: none;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
+
+/*-------------------- Phone Landscape and Smaller Styles --------------------*/
+@media only screen and (max-width: 480px) {
+    .logo {
+        height: 75px;
+    }
+
+    .nav-item a:hover {
+        color: #04d3cb;
+        box-shadow: none;
+    }
+
+    .modal-header {
+        font-size: 1.25rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        font-size: 1rem;
+    }
+    
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Needed for Bootstrap to work properly-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Piggy Bank sign in page.">
+    <!--Page title goes here-->
+    <title>Piggy Bank | Sign in</title>
+    <!--Links to required Bootstrap and Fontawesome files-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!--Links to site specific CSS and JS files-->
+    <link rel="stylesheet" href="../css/Master.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+    <!--Header used to wrap around page navigation links etc.-->
+    <header>
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+                        alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+                <button class="navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+                    aria-label="Toggle navigation links">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-links">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                                    class="fa-solid fa-sterling-sign"></span> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Calculators.html"
+                                aria-label="Go to Calculators page"><span class="fa-solid fa-calculator"></span>
+                                Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                                    class="fa-solid fa-address-book"></span> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                                    class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="sign-in">
+                            <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+                        </li>
+                        <li class="nav-item d-none" id="sign-out">
+                            <button class="btn btn-primary" aria-label="Sign out"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main used to wrap around page content-->
+    <main>
+        <div class="container">
+            <br>
+            <h1>Sign in to your Piggy Bank...</h1>
+            <div class="row" id="failSignIn" style="display: none;">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger">
+                        <strong>Sign in failure</strong>
+                        <p>You have entered an incorrect email and/or password. Please try again...</p>
+                    </div>
+                </div>
+            </div>
+            <!--Sign in form-->
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="emailInput" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="Enter email..."
+                                    name="email" value="admin@piggybankmortgages.com">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label for="passwordInput" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="passwordInput"
+                                    placeholder="Enter password..." name="pword" value="testPassword@123">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="rememberMe"
+                                        id="rememberMeInput"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button id="buttonSignIn" type="submit" class="btn btn-primary"
+                                aria-label="Sign in button">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <!--Footer used to wrap around page footer links etc.-->
+    <footer>
+        <div class="container p-4">
+            <div class="row my-4">
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+                        <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                                alt="Piggy Bank home link" height="100" width="100"></a>
+                    </div>
+                    <div class="text-center">
+                        <strong class="text-center">
+                            Connect with us
+                        </strong>
+                    </div>
+                    <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Facebook">
+                                <span class="fa-brands fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Twitter">
+                                <span class="fa-brands fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Instagram">
+                                <span class="fa-brands fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                                <span class="fa-brands fa-youtube"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <strong>
+                        Contact us
+                    </strong>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            © 2023 Copyright: Piggy Bank
+        </div>
+    </footer>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div id="cookieConsent" class="cookie-consent" style="display: none;">
+            <div class="cookie-consent-inner">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="cookie-text">
+                            <p>We would like to set cookies to understand how you use this website. We also use cookies
+                                set
+                                by other sites to help use deliver content from their services.</p>
+                            <p>To find out more about the cookies on this website, go to <a
+                                    href="../html/Cookies.html">Cookies</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+                        <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/master/master.js" type="module"></script>
+    <script src="../js/auth/auth.js" type="module"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+    <script src="../js/sign-in/sign-in.js" type="module"></script>
+</body>
+
+</html>

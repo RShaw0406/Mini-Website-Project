@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deposit Calculator tests When a value is input into depositAmountRangeInput should update the html correctly 1`] = `
+"<label for="depositAmountRangeInput"></label><input id="depositAmountRangeInput" type="range" value="1000">
+<div id="depositAmountValue">£100</div>
+<label for="depositTimeRangeInput"></label><input id="depositTimeRangeInput" type="number" value="20">
+<div id="depositTimeValue">20 years</div>
+<div id="monthlySavingsValue">£0.42</div>
+<div id="modalDepositInfo" style="display: none;"></div>
+<button id="btnOpenModalDepositAmountInfo"></button>
+<button id="btnOpenModalDepositTimeInfo"></button>
+<button class="close"></button>
+<button id="finishedDepositInfo"></button>
+<div id="headerDepositAmountInfo" style="display: none;"></div>
+<div id="headerDepositTimeInfo" style="display: block;"></div>
+<div id="divDepositAmountInfo" style="display: none;"></div>
+<div id="divDepositTimeInfo" style="display: block;"></div>
+"
+`;
+
+exports[`Deposit Calculator tests When a value is input into depositTimeRangeInput should update the html correctly 1`] = `
+"<label for="depositAmountRangeInput"></label><input id="depositAmountRangeInput" type="range" value="1000">
+<div id="depositAmountValue">£100</div>
+<label for="depositTimeRangeInput"></label><input id="depositTimeRangeInput" type="number" value="20">
+<div id="depositTimeValue">20 years</div>
+<div id="monthlySavingsValue">£0.42</div>
+<div id="modalDepositInfo" style="display: none;"></div>
+<button id="btnOpenModalDepositAmountInfo"></button>
+<button id="btnOpenModalDepositTimeInfo"></button>
+<button class="close"></button>
+<button id="finishedDepositInfo"></button>
+<div id="headerDepositAmountInfo" style="display: none;"></div>
+<div id="headerDepositTimeInfo" style="display: block;"></div>
+<div id="divDepositAmountInfo" style="display: none;"></div>
+<div id="divDepositTimeInfo" style="display: block;"></div>
+"
+`;
+
+exports[`Deposit Calculator tests When calculateDeposit is called should update the html correctly 1`] = `
+"<label for="depositAmountRangeInput"></label><input id="depositAmountRangeInput" type="range" value="1000">
+<div id="depositAmountValue">£100</div>
+<label for="depositTimeRangeInput"></label><input id="depositTimeRangeInput" type="number" value="20">
+<div id="depositTimeValue">20 years</div>
+<div id="monthlySavingsValue">£0.42</div>
+<div id="modalDepositInfo"></div>
+<button id="btnOpenModalDepositAmountInfo"></button>
+<button id="btnOpenModalDepositTimeInfo"></button>
+<button class="close"></button>
+<button id="finishedDepositInfo"></button>
+<div id="headerDepositAmountInfo"></div>
+<div id="headerDepositTimeInfo"></div>
+<div id="divDepositAmountInfo"></div>
+<div id="divDepositTimeInfo"></div>
+"
+`;

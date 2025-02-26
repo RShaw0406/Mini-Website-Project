@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Needed for Bootstrap to work properly-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Piggy Bank home page.">
+    <!--Page title goes here-->
+    <title>Piggy Bank | Home</title>
+    <!--Links to required Bootstrap and Fontawesome files-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!--Links to site specific CSS and JS files-->
+    <link rel="stylesheet" href="../css/Master.css">
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+    <!--Header used to wrap around page navigation links etc.-->
+    <header>
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+                        alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+                <button class="btn navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+                    aria-label="Toggle navigation links">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-links">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                                    class="fa-solid fa-sterling-sign"></span> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Calculators.html"
+                                aria-label="Go to Calculators page"><span class="fa-solid fa-calculator"></span>
+                                Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                                    class="fa-solid fa-address-book"></span> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                                    class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="sign-in">
+                            <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+                        </li>
+                        <li class="nav-item d-none" id="sign-out">
+                            <button class="btn btn-primary" onClick="clearLoginCreds()" aria-label="Sign out"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main used to wrap around page content-->
+    <main>
+        <div class="container">
+            <!--Page main image, tagline, get started button section-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tag-button-container">
+                        <img alt="Piggy Bank main page image" height="505" width="1296" class="img-fluid"
+                            src="../img/Home-Page-Header.webp" srcset="
+                        ../img/Home-Page-Header-696x271.webp 718w,
+                        ../img/Home-Page-Header-1116x435.webp 1138w,
+                        ../img/Home-Page-Header-1392x543.webp 1377w,
+                        ../img/Home-Page-Header-1872x730.webp 1857w,
+                        ../img/Home-Page-Header-2048x799.webp 2036w
+                      " sizes="(min-width: 1400px) 1296px, (min-width: 1200px) 1116px, (min-width: 1000px) 936px, (min-width: 780px) 696px, (min-width: 580px) 516px, calc(100vw - 24px)">
+                        <div class="tag-button">
+                            <strong>
+                                Your piggy bank may be small, but our mortgage options are big...
+                            </strong>
+                            <p>We have a range of calculators to suit your needs.</p>
+                            <p>Click the button below to get started.</p>
+                            <div class="text-center">
+                                <a href="../html/Calculators.html" class="btn btn-primary"
+                                    aria-label="Go to Calculators page">Get started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h1>Take a look at our products...</h1>
+            <br>
+            <!--Products section-->
+            <div class="d-flex justify-content-center row">
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img alt="First time buyers image" class="card-img-top img-fluid" height="256" width="348"
+                            src="../img/First-Time-Buyers.webp" srcset="
+                        ../img/First-Time-Buyers-208x147.webp 200w,
+                        ../img/First-Time-Buyers-576x407.webp 580w,
+                        ../img/First-Time-Buyers-816x577.webp 820w,
+                        ../img/First-Time-Buyers-1016x718.webp 1020w
+                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                        <div class="card-body">
+                            <p class="card-title">First Time Buyer</p>
+                            <a href="../html/Products.html" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img alt="Buy to let image" class="card-img-top img-fluid" height="256" width="348"
+                            src="../img/Buy-To-Let.webp" srcset="
+                        ../img/Buy-To-Let-208x147.webp 200w,
+                        ../img/Buy-To-Let-576x407.webp 580w,
+                        ../img/Buy-To-Let-816x577.webp 820w,
+                        ../img/Buy-To-Let-1016x718.webp 1020w
+                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                        <div class="card-body">
+                            <p class="card-title">Buy to Let</p>
+                            <a href="../html/Products.html" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img alt="Re-mortgage image" class="card-img-top img-fluid" height="256" width="348"
+                            src="../img/Re-Mortgage.webp" srcset="
+                        ../img/Re-Mortgage-208x147.webp 200w,
+                        ../img/Re-Mortgage-576x407.webp 580w,
+                        ../img/Re-Mortgage-816x577.webp 820w,
+                        ../img/Re-Mortgage-1016x718.webp 1020w
+                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                        <div class="card-body">
+                            <p class="card-title">Re-mortgage</p>
+                            <a href="../html/Products.html" class="btn btn-primary">More info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h1>Don't just take our word for it...</h1>
+            <br>
+            <!--Testimonials section-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="reviews" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#reviews" data-bs-slide-to="0" class="active"
+                                aria-label="Reviews indicator 1"></button>
+                            <button type="button" data-bs-target="#reviews" data-bs-slide-to="1"
+                                aria-label="Reviews indicator 2"></button>
+                            <button type="button" data-bs-target="#reviews" data-bs-slide-to="2"
+                                aria-label="Reviews indicator 3"></button>
+                        </div>
+                        <div class="justify-content-center carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row d-flex aligns-items-center justify-content-center">
+                                    <div class="col-md-4">
+                                        <img alt="Rishi review image" class="img-fluid" height="517" width="342"
+                                            src="../img/pexels-italo-melo-2379004.webp" srcset="
+                                        ../img/pexels-italo-melo-2379004-406x613.webp 406w,
+                                        ../img/pexels-italo-melo-2379004-566x855.webp 566w,
+                                        ../img/pexels-italo-melo-2379004-686x1036.webp 686w,
+                                        ../img/pexels-italo-melo-2379004-806x1217.webp 806w,
+                                        ../img/pexels-italo-melo-2379004-952x1438.webp 952w
+                                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h2>Rishi</h2>
+                                        <p>"Piggy Bank helped made the entire mortgage application process much simplier
+                                            by working out for me how much i could afford and borrow. They made
+                                            everything so much easier!"</p>
+                                        <h3>Rating:</h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row d-flex aligns-items-center justify-content-center">
+                                    <div class="col-md-4">
+                                        <img alt="Joe and Jane review image" class="img-fluid" height="517" width="342"
+                                            src="../img/pexels-ketut-subiyanto-4246224.webp" srcset="
+                                        ../img/pexels-ketut-subiyanto-4246224-406x613.webp 406w,
+                                        ../img/pexels-ketut-subiyanto-4246224-566x855.webp 566w,
+                                        ../img/pexels-ketut-subiyanto-4246224-686x1036.webp 686w,
+                                        ../img/pexels-ketut-subiyanto-4246224-806x1217.webp 806w,
+                                        ../img/pexels-ketut-subiyanto-4246224-952x1438.webp 952w
+                                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h2>Joe and Jane</h2>
+                                        <p>"We managed to save £20,000 on our first time buyer mortgage thanks to Piggy
+                                            Bank. It really made the difference and helped us get on the property
+                                            ladder."</p>
+                                        <h3>Rating:</h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row d-flex aligns-items-center justify-content-center">
+                                    <div class="col-md-4">
+                                        <img alt="Sue review image" class="img-fluid" height="517" width="342"
+                                            src="../img/pexels-andrea-piacquadio-774909.webp" srcset="
+                                        ../img/pexels-andrea-piacquadio-774909-406x613.webp 406w,
+                                        ../img/pexels-andrea-piacquadio-774909-566x855.webp 566w,
+                                        ../img/pexels-andrea-piacquadio-774909-686x1036.webp 686w,
+                                        ../img/pexels-andrea-piacquadio-774909-806x1217.webp 806w,
+                                        ../img/pexels-andrea-piacquadio-774909-952x1438.webp 952w
+                                      " sizes="(min-width: 1400px) 408px, (min-width: 1200px) 348px, (min-width: 1000px) 288px, (min-width: 780px) 208px, (min-width: 580px) 508px, calc(100vw - 32px)">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h2>Sue</h2>
+                                        <p>"Piggy Bank offered excellent advice and guidance when applying for a buy to
+                                            let mortgage. Excellent customer service, i would highly recommend Piggy
+                                            Bank to everyone!"</p>
+                                        <h3>Rating:</h3>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#reviews"
+                            data-bs-slide="prev" aria-label="Go to previous review">
+                            <span class="fa fa-angle-left"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#reviews"
+                            data-bs-slide="next" aria-label="Go to next review">
+                            <span class="fa fa-angle-right"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <!--Footer used to wrap around page footer links etc.-->
+    <footer>
+        <div class="container p-4">
+            <div class="row my-4">
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+                        <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                                alt="Piggy Bank home link" height="100" width="100"></a>
+                    </div>
+                    <div class="text-center">
+                        <strong class="text-center">
+                            Connect with us
+                        </strong>
+                    </div>
+                    <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Facebook">
+                                <span class="fa-brands fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Twitter">
+                                <span class="fa-brands fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Instagram">
+                                <span class="fa-brands fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                                <span class="fa-brands fa-youtube"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <strong>
+                        Contact us
+                    </strong>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            © 2023 Copyright: Piggy Bank
+        </div>
+    </footer>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div id="cookieConsent" class="cookie-consent" style="display: none;">
+            <div class="cookie-consent-inner">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="cookie-text">
+                            <p>We would like to set cookies to understand how you use this website. We also use cookies
+                                set
+                                by other sites to help use deliver content from their services.</p>
+                            <p>To find out more about the cookies on this website, go to <a
+                                    href="../html/Cookies.html">Cookies</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+                        <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/master/master.js" type="module"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+</body>
+
+
+</html>

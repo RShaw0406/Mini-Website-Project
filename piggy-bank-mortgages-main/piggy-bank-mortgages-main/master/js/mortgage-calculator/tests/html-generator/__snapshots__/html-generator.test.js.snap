@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HTML Generator Tests When calling getResults with a valid amount Should render the results section correctly 1`] = `
+"<div class="d-flex justify-content-center">
+                    <div class="row pt-2">
+                        <h3>Good news! you can borrow up to</h3>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="row pt-2">
+                        <h3>£200,000.00</h3>
+                    </div>
+                </div>
+        "
+`;
+
+exports[`HTML Generator Tests When calling getResults with an invalid amount Should render the results section correctly 1`] = `
+"<div class="d-flex justify-content-center">
+                    <div class="row pt-2" align="center">
+                        <h3>Sorry, we are unable to provide you with a mortgage based on the details you have provided</h3>
+                    </div>
+                </div>
+        "
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 1 Should render the personalDetails HTML section correctly when called with a single applicant 1`] = `
+"<div id="personal-details"><h4>Applicant 1:</h4>
+        <div class="row pt-2">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName1">First name</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" placeholder="Enter first name" name="firstname1" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName2">Surname</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" name="surname1" placeholder="Enter surname" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Email</label>
+            <div class="col-sm-8 pt-1">
+                <input type="email" class="form-control personal" name="email1" placeholder="Enter email address" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Phone number</label>
+            <div class="col-sm-8 pt-1">
+                <input type="number" class="form-control" placeholder="Enter mobile number(preferred)" name="phone" required="">
+            </div>
+        </div>
+    </div>
+    <br>
+    </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 1 Should render the personalDetails HTML section correctly when called with two applicants 1`] = `
+"<div id="personal-details"><h4>Applicant 1:</h4>
+        <div class="row pt-2">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName1">First name</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" placeholder="Enter first name" name="firstname1" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName2">Surname</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" name="surname1" placeholder="Enter surname" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Email</label>
+            <div class="col-sm-8 pt-1">
+                <input type="email" class="form-control personal" name="email1" placeholder="Enter email address" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Phone number</label>
+            <div class="col-sm-8 pt-1">
+                <input type="number" class="form-control" placeholder="Enter mobile number(preferred)" name="phone" required="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <h4>Applicant 2:</h4>
+        <div class="row pt-2">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName1">First name</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" placeholder="Enter first name" name="firstname2" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputName2">Surname</label>
+            <div class="col-sm-8 pt-1">
+                <input type="text" class="form-control personal" name="surname2" placeholder="Enter surname" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Email</label>
+            <div class="col-sm-8 pt-1">
+                <input type="email" class="form-control personal" name="email2" placeholder="Enter email address" required="">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-check form-check-inline">
+            <label class="required" for="exampleInputEmail">Phone number</label>
+            <div class="col-sm-8 pt-1">
+                <input type="number" class="form-control" placeholder="Enter mobile number(preferred)" name="phone" required="">
+            </div>
+        </div>
+    </div>
+    <br>
+    </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 3 Should render the employmentDetails HTML section correctly when called with a single applicant 1`] = `
+"<div id="employment"><h4>Applicant 1:</h4>
+        <div class="row">
+        <h7 class="required">Are you employed?</h7>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed1" id="employed1" required="">
+        <label class="form-check-label" for="employed1">
+            Yes
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed1" id="unemployed1" required="">
+        <label class="form-check-label" for="unemployed1">
+            No
+        </label>
+        </div>
+        <br>
+        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 3 Should render the employmentDetails HTML section correctly when called with two applicants 1`] = `
+"<div id="employment"><h4>Applicant 1:</h4>
+        <div class="row">
+        <h7 class="required">Are you employed?</h7>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed1" id="employed1" required="">
+        <label class="form-check-label" for="employed1">
+            Yes
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed1" id="unemployed1" required="">
+        <label class="form-check-label" for="unemployed1">
+            No
+        </label>
+        </div>
+        <br>
+        <h4>Applicant 2:</h4>
+        <div class="row">
+        <h7 class="required">Are you employed?</h7>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed2" id="employed2" required="">
+        <label class="form-check-label" for="employed2">
+            Yes
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="employed2" id="unemployed2" required="">
+        <label class="form-check-label" for="unemployed2">
+            No
+        </label>
+        </div>
+        <br>
+        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with a single employed applicant 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is your gross yearly salary you receive from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much in bonuses do you receive per year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the total amount you receive as a bonus from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="bonus" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">Are you paid anything else? if so tell us how much</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is any additional income you receive</small></p>
+                                    <input type="number" class="form-control income" name="other" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with a single unemployed applicant 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the gross pay you receive, including benefits</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with applicant1 employed and applicant2 unemployed 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is your gross yearly salary you receive from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much in bonuses do you receive per year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the total amount you receive as a bonus from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="bonus" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">Are you paid anything else? if so tell us how much</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is any additional income you receive</small></p>
+                                    <input type="number" class="form-control income" name="other" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <h4>Applicant 2:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the gross pay you receive, including benefits</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with applicant1 unemployed and applicant2 employed 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the gross pay you receive, including benefits</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <h4>Applicant 2:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is your gross yearly salary you receive from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much in bonuses do you receive per year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the total amount you receive as a bonus from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="bonus" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">Are you paid anything else? if so tell us how much</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is any additional income you receive</small></p>
+                                    <input type="number" class="form-control income" name="other" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with two employed applicants 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is your gross yearly salary you receive from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much in bonuses do you receive per year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the total amount you receive as a bonus from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="bonus" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">Are you paid anything else? if so tell us how much</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is any additional income you receive</small></p>
+                                    <input type="number" class="form-control income" name="other" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <h4>Applicant 2:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is your gross yearly salary you receive from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much in bonuses do you receive per year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the total amount you receive as a bonus from your employer</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="bonus" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">Are you paid anything else? if so tell us how much</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is any additional income you receive</small></p>
+                                    <input type="number" class="form-control income" name="other" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 4 Should render the incomeDetails HTML section correctly when called with two unemployed applicants 1`] = `
+"<div id="income"><h4>Applicant 1:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the gross pay you receive, including benefits</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <h4>Applicant 2:</h4><div class="row pt-2">
+                            <div class="form-check form-check-inline">
+                                <label class="required">How much do you earn each year, before tax?</label>
+                                <br>
+                                <div class="col-sm-8 pt-1">
+                                    <p><small>This is the gross pay you receive, including benefits</small>
+                                    </p>
+                                    <input type="number" class="form-control income" name="yearly-salary" min="1" step="any" required="">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 5 Should render the outgoingsDetails HTML section correctly when called with a single applicant 1`] = `
+"<div id="outgoings"><h4>Applicant 1:</h4>
+                    <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required">How much are you paying off in credit cards?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is the total balance you currently hold on all credit cards</small>
+                            </p>
+                            <input type="number" class="form-control outgoings" name="credit-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much are you paying off in loans?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is for any outstanding loans e.g. car finance</small></p>
+                            <input type="number" class="form-control outgoings" name="loan-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much in other expenses are you paying?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This could be for household bills such as electricity or gas</small></p>
+                            <input type="number" class="form-control outgoings" name="other-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                </div>"
+`;
+
+exports[`HTML Generator Tests When calling renderHtml with a 5 Should render the outgoingsDetails HTML section correctly when called with two applicants 1`] = `
+"<div id="outgoings"><h4>Applicant 1:</h4>
+                    <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required">How much are you paying off in credit cards?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is the total balance you currently hold on all credit cards</small>
+                            </p>
+                            <input type="number" class="form-control outgoings" name="credit-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much are you paying off in loans?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is for any outstanding loans e.g. car finance</small></p>
+                            <input type="number" class="form-control outgoings" name="loan-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much in other expenses are you paying?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This could be for household bills such as electricity or gas</small></p>
+                            <input type="number" class="form-control outgoings" name="other-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Applicant 2:</h4>
+                    <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required">How much are you paying off in credit cards?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is the total balance you currently hold on all credit cards</small>
+                            </p>
+                            <input type="number" class="form-control outgoings" name="credit-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much are you paying off in loans?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This is for any outstanding loans e.g. car finance</small></p>
+                            <input type="number" class="form-control outgoings" name="loan-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="form-check form-check-inline">
+                        <label class="required" for="exampleInputName1">How much in other expenses are you paying?</label>
+                        <br>
+                        <div class="col-sm-8 pt-1">
+                            <p><small>This could be for household bills such as electricity or gas</small></p>
+                            <input type="number" class="form-control outgoings" name="other-debt" step="any" required="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                </div>"
+`;

@@ -1,0 +1,81 @@
+/*-------------------- Home Page Styles --------------------*/
+.tag-button-container {
+    position: relative;
+}
+
+.tag-button {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #132C33;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 0.25rem #04d3cb;
+
+}
+
+.card {
+    border-radius: 0.5rem;
+    border: solid 0.25rem #04d3cb;
+    background-color: #132C33;
+    color: #FFFFFF;
+}
+
+.card p {
+    font-weight: bold;
+}
+
+.carousel {
+    background-color: #132C33;
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    border: solid 0.25rem #04d3cb;
+    padding: 1rem;
+    min-height: 458px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    color: #04d3cb !important;
+    font-size: 5rem;
+}
+
+.carousel-indicators {
+    z-index: inherit;
+}
+
+/*-------------------- Tablet Landscape Styles --------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .tag-button {
+        margin-top: 1rem;
+        position: relative;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+/*-------------------- Tablet Styles --------------------*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .tag-button {
+        margin-top: 1rem;
+        position: relative;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+/*-------------------- Phone Landscape and Smaller Styles --------------------*/
+@media only screen and (max-width: 480px) {
+    .tag-button {
+        margin-top: 1rem;
+        position: relative;
+        bottom: auto;
+        left: auto;
+    }
+
+    /* Home Page CSS */
+    .card {
+        margin-bottom: 1rem;
+    }
+}

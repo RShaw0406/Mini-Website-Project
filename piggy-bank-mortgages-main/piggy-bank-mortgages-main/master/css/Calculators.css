@@ -1,0 +1,83 @@
+/*-------------------- Calculators Page Styles --------------------*/
+.range-value {
+  font-size: 1.5rem;
+  float: right;
+}
+
+.info-source {
+  font-size: 1rem;
+}
+
+.info-source a {
+  font-size: 1rem;
+  color: #04d3cb;
+}
+
+.step-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.step-status span {
+  appearance: none;
+  background: var(--status-btn-bg);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-status span.active {
+  background-color: #04d3cb;
+  color: #132C33;
+}
+
+.was-validated input:invalid {
+  border-color: #FF9696 !important;
+}
+
+.was-validated .form-check-input:invalid~.form-check-label {
+  border-color: #FF9696 !important;
+  color: #FF9696 !important;
+}
+
+.was-validated input:valid {
+  border-color: #18DC81 !important;
+}
+
+.was-validated .form-check-input:valid~.form-check-label {
+  border-color: #18DC81 !important;
+  color: #18DC81 !important;
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+/*-------------------- Tablet Landscape Styles --------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*-------------------- Tablet Styles --------------------*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/*-------------------- Phone Landscape and Smaller Styles --------------------*/
+@media only screen and (max-width: 480px) {
+  .info-source {
+    font-size: 0.9rem;
+  }
+
+  .info-source a {
+    font-size: 0.9rem;
+    color: #04d3cb;
+  }
+}

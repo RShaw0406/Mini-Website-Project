@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Needed for Bootstrap to work properly-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Piggy Bank master page.">
+  <!--Page title goes here-->
+  <title>Piggy Bank | Help/FAQs</title>
+  <!--Links to required Bootstrap and Fontawesome files-->
+  <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <!--Links to site specific CSS and JS files-->
+  <link rel="stylesheet" href="../css/Master.css">
+  <link rel="icon" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+  <!--Header used to wrap around page navigation links etc.-->
+  <header>
+    <nav class="navbar navbar-expand-xl sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+            alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+        <button class="navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+          aria-label="Toggle navigation links">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse-links">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                  class="fa-solid fa-sterling-sign"></span> Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/Calculators.html" aria-label="Go to Calculators page"><span
+                  class="fa-solid fa-calculator"></span>
+                Calculators</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                  class="fa-solid fa-address-book"></span> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                  class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" id="sign-in">
+              <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                  class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+            </li>
+            <li class="nav-item d-none" id="sign-out">
+              <button class="btn btn-primary" onClick="clearLoginCreds()" aria-label="Sign out"><span
+                  class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Main used to wrap around page content-->
+  <main>
+    <!-- Page content -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-5">Frequently Asked Questions (FAQ)</h2>
+      <p>Here are some frequently asked questions about our mortgage services:</p>
+      <div class="accordion" id="faqExample">
+        <div class="card">
+          <div class="card-header p-2" id="headingOne">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              What types of accounts do you offer?
+            </button>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+            <div class="card-body">
+              We offer checking accounts, savings accounts, money market accounts, and certificates of deposit (CDs).
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingTwo">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              How do I apply for a mortgage?
+            </button>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+            <div class="card-body">
+              You can apply for a mortgage online or by visiting one of our branches.
+              <br>For branch locator please visit out contact page, using our Map Locator service.
+              <br>You will need to provide personal and financial information and we will review your application to
+              determine your eligibility for the loan.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingThree">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              How long does the mortgage last for?
+            </button>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+            <div class="card-body">
+              There is no conclusive response to this.
+              Mortgages, however, typically have a maximum 35-year term.
+              <br>Your monthly payments are probably going to be cheaper as the mortgage term lengthens.
+              But, because you'll be paying interest on the borrowed money over a longer period of time, a longer term
+              will result in an overall higher interest payment.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header p-2" id="headingFour">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              How much can I borrow?
+            </button>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqExample">
+            <div class="card-body">
+              Typically, you might be able to borrow between three and four and a half times your annual wage. Hence, if
+              your annual income is £30,000, you may borrow between £90,000 and £135,000 from a lender.
+              <br>However keep in mind that our company will make the decision on how much we will lend on your unique
+              circumstances, such as your income and outgoings.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingFive">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              What does a decision in principle mean?
+            </button>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqExample">
+            <div class="card-body">
+              A decision in principle reveals how much money a lender could be willing to loan you.
+              <br>A mortgage in principle or an arrangement in principle are other names for it.
+              <br>You'll have an idea of what you can afford, which will be helpful when house looking.
+              <br>To obtain an official mortgage offer, however, you must submit a mortgage application form. Once
+              you've found the house you wish to purchase, that part comes next.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header p-2" id="headingSix">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="false" aria-controls="collapseSix">
+              What does a loan to value mean with a mortgage?
+            </button>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqExample">
+            <div class="card-body">
+              The size of the mortgage in relation to the value of your property is known as the loan to value, or LTV.
+              <br>Usually, a percentage is used to express it.
+              <br>For instance, you would require a 10% deposit for a mortgage with a 90% LTV. Mortgage interest rates
+              tend to be lower the lower the LTV.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingSeven">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven"
+              aria-expanded="false" aria-controls="collapseSeven">
+              What is the difference between a fixed-rate mortgage and a variable-rate mortgage?
+            </button>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSix" data-parent="#faqExample">
+            <div class="card-body">
+              With a fixed-rate mortgage, your monthly payment is fixed for the duration of the loan.
+              This makes budgeting simpler because you can rest easy knowing that your monthly repayments won't vary
+              over that time.
+              <br>A variable-rate mortgage, on the other hand, allows you to adjust your payment to reflect changes in
+              the Bank of England base rate.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingEight">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseEight"
+              aria-expanded="false" aria-controls="collapseEight">
+              How long should I fix my mortgage for?
+            </button>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingSix" data-parent="#faqExample">
+            <div class="card-body">
+              There are several things to take into account in this situation, including interest rates, mortgage fees,
+              and your individual plans.
+              <br>Deals within the market typically range from two to ten years in length and have set rates.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingNine">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseNine"
+              aria-expanded="false" aria-controls="collapseNine">
+              How may my mortgage be paid off faster?
+            </button>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingSix" data-parent="#faqExample">
+            <div class="card-body">
+              You may wish to consider making overpayments if you want to pay off your mortgage more rapidly.
+              <br>Even a small monthly increase of £50 will lower your overall interest costs and shorten the length of
+              your mortgage.
+              <br>Most lenders will only allow you to overpay by up tp 10% a year, but our company allows you to overpay
+              by up to 12.5% a year.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header p-2" id="headingTen">
+            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTen"
+              aria-expanded="false" aria-controls="collapseTen">
+              What is the address, the opening hours and phone number of my Piggy Bank branch?
+            </button>
+          </div>
+          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#faqExample">
+            <div class="card-body">
+              Address: 18 High St, Belfast BT12BD <br> Phone number: + 0123456789<br> Opening Hours: Monday to Friday
+              09:30AM - 04:30PM
+            </div>
+          </div>
+        </div>
+        <p></p>
+
+
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </main>
+  <!--Footer used to wrap around page footer links etc.-->
+  <footer>
+    <div class="container p-4">
+      <div class="row my-4">
+        <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+          <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+            <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                alt="Piggy Bank home link" height="100" width="100"></a>
+          </div>
+          <div class="text-center">
+            <strong class="text-center">
+              Connect with us
+            </strong>
+          </div>
+          <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+            <li>
+              <a class="px-2" href="#!" aria-label="Go to Facebook">
+                <span class="fa-brands fa-facebook-f"></span>
+              </a>
+            </li>
+            <li>
+              <a class="px-2" href="#!" aria-label="Go to Twitter">
+                <span class="fa-brands fa-twitter"></span>
+              </a>
+            </li>
+            <li>
+              <a class="px-2" href="#!" aria-label="Go to Instagram">
+                <span class="fa-brands fa-instagram"></span>
+              </a>
+            </li>
+            <li>
+              <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                <span class="fa-brands fa-youtube"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+        </div>
+        <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+            </li>
+            <li class="mb-2">
+              <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <strong>
+            Contact us
+          </strong>
+
+          <ul class="list-unstyled">
+            <li>
+              <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+            </li>
+            <li>
+              <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+            </li>
+            <li>
+              <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3">
+      © 2023 Copyright: Piggy Bank
+    </div>
+  </footer>
+  <div class="cookie-overlay" id="cookieOverlay">
+    <div id="cookieConsent" class="cookie-consent" style="display: none;">
+      <div class="cookie-consent-inner">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <div class="cookie-text">
+              <p>We would like to set cookies to understand how you use this website. We also use cookies
+                set
+                by other sites to help use deliver content from their services.</p>
+              <p>To find out more about the cookies on this website, go to <a href="../html/Cookies.html">Cookies</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+            <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/master/master.js" type="module"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+</body>
+
+</html>

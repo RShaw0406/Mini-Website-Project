@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Needed for Bootstrap to work properly-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Piggy Bank master page.">
+    <!--Page title goes here-->
+    <title>Piggy Bank | Accessibility</title>
+    <!--Links to required Bootstrap and Fontawesome files-->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!--Links to site specific CSS and JS files-->
+    <link rel="stylesheet" href="../css/Master.css">
+    <link rel="stylesheet" href="../css/Accessibility.css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/PiggyBankLogoSmallNB.webp">
+</head>
+<!--Body content -->
+
+<body>
+    <!--Header used to wrap around page navigation links etc.-->
+    <header>
+        <nav class="navbar navbar-expand-xl sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Home.html"><img src="../img/PiggyBankLogoLargeNB.webp"
+                        alt="Piggy Bank home link" class="logo" height="100" width="100"></a>
+                <button class="navbar-toggler collapsed position-relative" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-collapse-links" aria-controls="navbar-collapse-links" aria-expanded="false"
+                    aria-label="Toggle navigation links">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-collapse-links">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Products.html" aria-label="Go to Products page"><span
+                                    class="fa-solid fa-sterling-sign"></span> Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Calculators.html"
+                                aria-label="Go to Calculators page"><span class="fa-solid fa-calculator"></span>
+                                Calculators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/Contact.html" aria-label="Go to Contact page"><span
+                                    class="fa-solid fa-address-book"></span> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/FAQs.html" aria-label="Go to Help/FAQs page"><span
+                                    class="fa-solid fa-circle-question"></span> Help/FAQs</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="sign-in">
+                            <button class="btn btn-primary" aria-label="Go to Sign in page"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign in</button>
+                        </li>
+                        <li class="nav-item d-none" id="sign-out">
+                            <button class="btn btn-primary" onClick="clearLoginCreds()" aria-label="Sign out"><span
+                                    class="fa-solid fa-right-to-bracket"></span> Sign out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Main used to wrap around page content-->
+    <main>
+        <div class="container">
+            <br>
+            <h1>Accessibility statement...</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <nav class="navbar sticky-top sticky-offset d-none d-md-block">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#accessibilitySection"
+                                    aria-label="Accessibility link">Accessibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#technicalInfoSection"
+                                    aria-label="Technical info link">Technical information about this
+                                    website's
+                                    accessibility</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#technicalIssuesSection" aria-label="Tech issues link">Issues
+                                    with technology</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testingSection" aria-label="Testing link">How we tested this
+                                    website</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-9">
+                    <div class="row guidance-section" id="accessibilitySection">
+                        <div class="col-md-12">
+                            <h2>Accessibility</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="accordionAccessibility">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed card-link" role="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseAccessibilityOne"
+                                            aria-label="Open Accessibility">Accessibility</a>
+                                    </div>
+                                    <div id="collapseAccessibilityOne" class="collapse"
+                                        data-parent="#accordionAccessibility">
+                                        <div class="card-body">
+                                            <p>This website is developed and maintained by Piggy Bank. We want as many
+                                                people as possible to be able to use this website. This means that you
+                                                should be able to:</p>
+                                            <ul>
+                                                <li>Zoom in up to 200% without the text splitting off the screen</li>
+                                                <li>Navigate most of the website using just a keyboard</li>
+                                                <li>Navigate most of the website using speech recognition software</li>
+                                                <li>Clearly understand the content and insrtuctions on the website</li>
+                                            </ul>
+                                            <p><a aria-label="Go to AbilityNet" href="https://www.abilitynet.org.uk/"
+                                                    target="_blank">AbilityNet</a> has advice on making your device
+                                                easier to use if you have a disability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" role="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAccessibilityTwo" aria-label="Open How accessible">How
+                                        accessible is this website</a>
+                                </div>
+                                <div id="collapseAccessibilityTwo" class="collapse"
+                                    data-parent="#accordionAccessibility">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Compliant with the Web Content Accessibility Guidelines version 2.0 to
+                                                at least AA standard.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" role="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAccessibilityThree" aria-label="Open What to do">What
+                                        to do if you can not use parts
+                                        of the website</a>
+                                </div>
+                                <div id="collapseAccessibilityThree" class="collapse"
+                                    data-parent="#accordionAccessibility">
+                                    <div class="card-body">
+                                        <p>If you need further infromation or assistance with any part of the website
+                                            refer to <a href="../html/FAQs.html">Help/FAQs</a> or you can also <a
+                                                href="../html/Contact.html">Contact us</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" role="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseAccessibilityFour"
+                                        aria-label="Open Reporting">Reporting accessibility problems
+                                        with this website</a>
+                                </div>
+                                <div id="collapseAccessibilityFour" class="collapse"
+                                    data-parent="#accordionAccessibility">
+                                    <div class="card-body">
+                                        <p>We are always looking for ways we can make this website more accessible. If
+                                            you find problems that are not listed on this page you can send us an email
+                                            <a href="mailto:help@piggybank.com">here</a>. Or you can also <a
+                                                href="../html/Contact.html">Contact us</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row guidance-section" id="technicalInfoSection">
+                        <div class="col-md-12">
+                            <h2>Technical information about this website's accessibility</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <p>Piggy Bank is committed to making this website accessible.</p>
+                            <p>This website is compliant with the Web Content Accessibility Guidelines version 2.0 to at
+                                least AA standard.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row guidance-section" id="technicalIssuesSection">
+                        <div class="col-md-12">
+                            <h2>Issues with technology</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="accordionTechnicalIssues">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collpased card-link" role="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTechnicalIssuesOne"
+                                            aria-label="Open Tech Issues">Issues with technology</a>
+                                    </div>
+                                    <div id="collapseTechnicalIssuesOne" class="collapse"
+                                        data-parent="#accordionTechnicalIssues">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>No known issues</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collpased card-link" role="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTechnicalIssuesTwo"
+                                            aria-label="Open Text Issues">Issues with text</a>
+                                    </div>
+                                    <div id="collapseTechnicalIssuesTwo" class="collapse"
+                                        data-parent="#accordionTechnicalIssues">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>No known issues</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collpased card-link" role="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTechnicalIssuesThree"
+                                            aria-label="Open Image Issues">Issues with images, video and
+                                            audio</a>
+                                    </div>
+                                    <div id="collapseTechnicalIssuesThree" class="collapse"
+                                        data-parent="#accordionTechnicalIssues">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>No known issues</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collpased card-link" role="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTechnicalIssuesFour"
+                                            aria-label="Open Interactive Tools Issues">Issues with interactive tools
+                                            and transactions</a>
+                                    </div>
+                                    <div id="collapseTechnicalIssuesFour" class="collapse"
+                                        data-parent="#accordionTechnicalIssues">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>No known issues</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row guidance-section" id="testingSection">
+                        <div class="col-md-12">
+                            <h2>How we tested this website</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <p>This website was last tested on ....</p>
+                            <p>A sample of the main pages on the website were used in the accessibility testing process.
+                            </p>
+                            <p>The following tools were used for testing the website's accessibility:</p>
+                            <ul>
+                                <li><a href="https://accessibilityinsights.io/" target="_blank"
+                                        aria-label="Go to Accessibility Insights"></a>Accessibility Insights
+                                </li>
+                                <li><a href="https://validator.w3.org/" target="_blank"
+                                    aria-label="Go to 22.	W3C Markup Validation Service"></a>22.	W3C Markup Validation Service
+                            </li>
+                                <li><a href="https://webaim.org/" target="_blank" aria-label="Go to WAVE"></a>WAVE (Web
+                                    Accessibility Evalualtion
+                                    Tool)</li>
+                                <li><a href="https://developer.chrome.com/docs/lighthouse/overview/" target="_blank"
+                                        aria-label="Go to Lighthouse"></a>Google Lighthouse</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </main>
+    <!--Footer used to wrap around page footer links etc.-->
+    <footer>
+        <div class="container p-4">
+            <div class="row my-4">
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center mb-4 mx-auto">
+                        <a href="../html/Home.html"><img src="../img//PiggyBankLogoSmallNB.webp" class="logo"
+                                alt="Piggy Bank home link" height="100" width="100"></a>
+                    </div>
+                    <div class="text-center">
+                        <strong class="text-center">
+                            Connect with us
+                        </strong>
+                    </div>
+                    <ul class="social-text list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Facebook">
+                                <span class="fa-brands fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Twitter">
+                                <span class="fa-brands fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="px-2" href="#!" aria-label="Go to Instagram">
+                                <span class="fa-brands fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ps-2" href="#!" aria-label="Go to YouTube">
+                                <span class="fa-brands fa-youtube"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="../html/Products.html" aria-label="Go to Products page">Products</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Calculators.html" aria-label="Go to Calculators page">Calculators</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Contact.html" aria-label="Go to Contact page">Contact</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/FAQs.html" aria-label="Go to Help/FAQs page">Help/FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/SignIn.html" aria-label="Go to Sign in page">Sign in</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Accessibility.html" aria-label="Go to Accessibility page">Accessibility</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../html/Cookies.html" aria-label="Go to Cookies page">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-1 col-md-12 mb-4 mb-md-0">
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <strong>
+                        Contact us
+                    </strong>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><span class="fas fa-map-marker-alt pe-2"></span> Here, There, Everywhere</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-phone pe-2"></span> + 0123456789</p>
+                        </li>
+                        <li>
+                            <p><span class="fas fa-envelope pe-2 mb-0"></span> contact@piggybank.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3">
+            © 2023 Copyright: Piggy Bank
+        </div>
+    </footer>
+    <div class="cookie-overlay" id="cookieOverlay">
+        <div id="cookieConsent" class="cookie-consent" style="display: none;">
+            <div class="cookie-consent-inner">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <div class="cookie-text">
+                            <p>We would like to set cookies to understand how you use this website. We also use cookies
+                                set
+                                by other sites to help use deliver content from their services.</p>
+                            <p>To find out more about the cookies on this website, go to <a
+                                    href="../html/Cookies.html">Cookies</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <input type="button" id="btnAcceptCookies" value="Accept Cookies" class="btn btn-primary">
+                        <a href="../html/Cookies.html" class="btn btn-primary">Manage Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/master/master.js" type="module"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCX3G9KSPC"></script>
+</body>
+
+</html>
